@@ -12,3 +12,11 @@ services:
     ports:
       - "5432"
 ###< doctrine/doctrine-bundle ###
+
+  pgadmin:
+    image: dpage/pgadmin4:6
+    environment:
+      PGADMIN_DEFAULT_EMAIL: 'example@domain.com'
+      PGADMIN_DEFAULT_PASSWORD: 'password'
+    ports:
+      - "80"
