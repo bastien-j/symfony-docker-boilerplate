@@ -31,6 +31,7 @@ RUN docker-php-ext-configure intl \
 RUN docker-php-ext-install -j$(nproc) intl pdo_pgsql pgsql zip
 
 RUN pecl install apcu && docker-php-ext-enable apcu opcache
+RUN pecl install xdebug && docker-php-ext-enable xdebug
 
 RUN a2enmod rewrite
 
